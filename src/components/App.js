@@ -12,8 +12,8 @@ const App = () => {
   
      function handleComplete(id){
         let updatedTodos=todos.map((todo)=>{
-
-          return {...todo,isComplete:true};
+               
+          return todo.id==id?{...todo,isComplete:true}:todo;
         });
 
         setTodos(updatedTodos);
