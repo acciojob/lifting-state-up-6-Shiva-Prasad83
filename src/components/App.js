@@ -11,12 +11,12 @@ const App = () => {
     ]);
   
      function handleComplete(id){
-        for(let todo of todos){
-          if(todo.id==id){
-            todo.isComplete=true;
-          }
-        }
-        setTodos([...todos]);
+        let updatedTodos=todos.map((todo)=>{
+
+          return todo.id==id?{...todo,isComplete:true}:todo;
+        });
+
+        setTodos(updatedTodos);
      }
 
     return(
