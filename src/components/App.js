@@ -2,7 +2,7 @@
 import React from "react";
 import './../styles/App.css';
 import { useState } from "react";
-import Child from "./Child";
+import TodoList from "./TodoList";
 const App = () => {
    const [todos,setTodos]=useState([
         {id:1,todo:"Learn React",isComplete:false},
@@ -21,7 +21,7 @@ const App = () => {
 
     return(
         <div>
-            <Child todos={todos} handleComplete={handleComplete}/>
+            <TodoList todos={todos} handleComplete={handleComplete}/>
         </div>
   )
 }

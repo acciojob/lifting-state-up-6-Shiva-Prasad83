@@ -1,6 +1,6 @@
 import React from 'react';
 
-function Child({todos,handleComplete}){
+function TodoList({todos,handleComplete}){
 
     return(
         <ul>
