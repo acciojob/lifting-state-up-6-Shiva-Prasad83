@@ -5,9 +5,9 @@ function Child({todos,setTodos}){
     function completeTodo(id){
        
         for(let todo of todos){
-            if(todo.id==id){
+            
               todo.isComplete=true;
-            }
+            
         }
         let newTodos=[...todos];
         setTodos(newTodos);
@@ -17,7 +17,7 @@ function Child({todos,setTodos}){
         <ul>
             {
                 todos.map((todo)=>{
-                    return <li>
+                    return <li key={todo.id}>
                         {todo.todo}
                         {!todo.isComplete && <button onClick={()=>completeTodo(todo.id)}>Complete</button>}
                     </li>
