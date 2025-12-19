@@ -17,4 +17,4 @@ function TodoList({todos,handleComplete}){
     )
 }
 
-export default Child;
+export default TodoList;
